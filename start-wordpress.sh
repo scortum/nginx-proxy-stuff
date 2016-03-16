@@ -38,7 +38,6 @@ docker run -d  \
            -e VIRTUAL_HOST=lineli.de  \
            -v ${BASE_DIR}/wordpress:/var/www/html   \
            -v ${BASE_DIR}/wordpress_config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini   \
-           -p 8080:80  \
            wordpress
 
 
