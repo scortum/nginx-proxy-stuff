@@ -5,13 +5,10 @@ VERSION=latest
 DOCKER_CONTAINER_NAME=nginx-proxy
 
 
-
-
 cat > /etc/default/${DOCKER_CONTAINER_NAME} << EOF
 DOCKER_IMAGE=${IMAGE_NAME}:${VERSION}
 DOCKER_CONTAINER_NAME=${DOCKER_CONTAINER_NAME}
 EOF
-
 
 cat > /lib/systemd/system/${DOCKER_CONTAINER_NAME}.service << EOF
 [Unit]
