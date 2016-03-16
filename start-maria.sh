@@ -11,4 +11,4 @@ docker run -d  \
            -e MYSQL_ROOT_PASSWORD=${PASSWORD}  \
            mariadb:10
 
-
+#  -v /my/own/datadir:/var/lib/mysql
