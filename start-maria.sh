@@ -6,9 +6,12 @@ if [ ! -f /data/maria/password.txt ]; then
 fi
 
 PASSWORD=`cat /data/maria/password.txt`
+
+docker stop mariadb
+docker rm mariadb
 docker run -d  \
            --name mariadb  \
            -e MYSQL_ROOT_PASSWORD=${PASSWORD}  \
+           -v /data/maria/data:/var/lib/mysql   \
            mariadb:10
 
-#  -v /my/own/datadir:/var/lib/mysql
